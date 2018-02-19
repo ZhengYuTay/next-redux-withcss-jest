@@ -1,5 +1,5 @@
 import React from "react";
-import test from "../style.css";
+import "../style.css";
 import styles from "./index.css";
 import initStore from "../store/store";
 import withRedux from "next-redux-wrapper";
