@@ -1,4 +1,4 @@
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import React from "react";
 import renderer from "react-test-renderer";
 
@@ -6,8 +6,7 @@ import App from "./index.js";
 
 describe("With Enzyme", () => {
   it('App shows "O Hai world!"', () => {
-    const app = shallow(<App />);
-    console.log('here ',app.find(".example").text());
+    const app = mount(<App />);
     expect(app.find(".example").text()).toEqual("O Hai world!");
   });
 });

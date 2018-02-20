@@ -1,4 +1,5 @@
 const withCSS = require("@zeit/next-css");
+const path = require("path");
 /* Without CSS Modules, with PostCSS */
 // module.exports = withCSS();
 
@@ -13,6 +14,7 @@ module.exports = withCSS({
     localIdentName: "[local]___[hash:base64:5]"
   },
   webpack: function(config) {
+    config.resolve.modules.push(path.resolve(__dirname, "/util"));
     return config;
   }
 });
